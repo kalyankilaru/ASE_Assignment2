@@ -1,0 +1,47 @@
+<style>
+
+    h1 {
+        font-size: 40px;
+        color: #f5f7f9;
+        transition-duration: 1s;
+        font-weight: 200;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 80px 0;
+        height: 1000px;
+        text-align: center;
+    }
+
+    .input {
+        color: black;
+        text-decoration-color: black;
+    }
+
+</style>
+
+
+<div class="container-fluid" style="background-image: url(images/homebackground.JPG);height: 665px" align="center">
+    <br><br>
+
+    <h1>Maps</h1>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 16px;color: black;font-weight: 900;padding-right: 10px">Source :</span>
+
+    <input class="input" type="text" google-place ng-model="startlocation" id="startlocation" placeholder="Source"
+           style="width: 200px"><br><br>
+
+    <span style="font-size: 16px;color: black;font-weight: 900;padding-left: 5px">Destination :</span>
+    <input class="input" type="text" google-place ng-model="endlocation" id="endlocation" placeholder="Destination"
+           style="width: 200px"><br><br>
+
+
+    <button type="button" id="btn" ng-click="calcRoute()" class="btn btn-warning">Get Directions</button>
+    <br><br>
+    <div id="map-canvas" align="center" style="height: 350px;width: 100%"></div>
+
+
+</div>
+
